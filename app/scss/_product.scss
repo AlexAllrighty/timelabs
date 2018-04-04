@@ -1,0 +1,148 @@
+.product {
+  height: 565px;
+  @include section-padding;
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.product__slider {
+  position: relative;
+  flex-basis: 60%;
+  height: 400px;
+}
+
+.slider__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 0px black;
+  transition: opacity 1s;
+  &--hidden {
+    opacity: 0;
+  }
+}
+
+.slider__button {
+  position: absolute;
+  top: 44%;
+  width: 29px;
+  height: 50px;
+  background-color: black;
+  border: none;
+  opacity: 0.7;
+  &--previous {
+    background-image: url('../img/arrow-previous.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  &--next {
+    right: 0;
+    background-image: url('../img/arrow-next.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  &:hover, &:focus {
+    outline: none;
+    opacity: 1;
+  }
+
+
+}
+.slider__radio-block {
+  display: flex;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  margin-left: -54px;
+  label {
+    margin-left: 6px;
+    cursor: pointer;
+    &:before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border: 4px solid white;
+      border-radius: 10px;
+      background-color: white;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.slider__radio {
+  position: absolute;
+  opacity: 0;
+}
+
+.slider__radio:checked + label:before {
+  background-color: transparent;
+  border-color: #e6e8e8;
+}
+
+.product__description {
+  flex-basis: 30%;
+  margin-left: 40px;
+  text-align: center;
+}
+
+.description__title {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.description__text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.order__wrapper {
+  flex-basis: 100%;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.product__button {
+  margin: 0 auto;
+}
+
+@media (max-width: $l-width) {
+  .product {
+    height: auto;
+    margin-bottom: 50px;
+  }
+  .product__slider {
+    flex-basis: 100%;
+    height: 400px;
+    order: 1;
+  }
+
+  .product__description {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+
+  .order__wrapper {
+    order: 2;
+  }
+}
+
+@media (max-width: $s-width) {
+  .product__slider {
+    flex-basis: 100%;
+    height: 260px;
+    order: 1;
+  }
+}
+
+
+

@@ -1,0 +1,29 @@
+.page-header {
+  @include section-padding;
+}
+
+.main-nav__list {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+}
+
+.list__item {
+  margin-right: 30px;
+}
+
+.list-item__link {
+  @include link-reset;
+  text-transform: uppercase;
+  color: white;
+  &:hover, &:focus {
+    outline: none;
+    color: red;
+  }
+}
+
+@media (max-width: $s-width) {
+  .page-header {
+    display: none;
+  }
+}

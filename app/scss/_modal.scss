@@ -1,0 +1,161 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  height: 400px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 6px;
+  box-shadow: 5px 5px 5px 0px grey;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  animation-name: bounce;
+  animation-duration: 0.5s;
+}
+
+@keyframes bounce {
+  0% { transform: translate(-50%, -1000px);
+    top: -30%;}
+
+  100% { transform: translate(-50%, -50%);
+    top: 50%;}
+}
+
+
+.modal__title {
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.cross {
+  display: block;
+  position: relative;
+  left: 95%;
+  top: -90px;
+  width: 18px;
+  height: 18px;
+  &:after {
+    position: absolute;
+    left: 8px;
+    top: -1px;
+    display: block;
+    content: "";
+    width: 3px;
+    height: 20px;
+    background-color: black;
+    transform: rotate(45deg);
+  }
+  &:before {
+    position: absolute;
+    left: 8px;
+    top: -1px;
+    display: block;
+    content: "";
+    width: 3px;
+    height: 20px;
+    background-color: black;
+    transform: rotate(-45deg);
+  }
+}
+
+.modal__form {
+  display: flex;
+  position: relative;
+}
+
+.title--modal {
+  font-size: 36px;
+}
+
+.modal__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__input {
+  width: 260px;
+  height: 50px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  &:focus {
+    border: 1px solid black;
+    outline: none;
+  }
+}
+
+.modal__textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 20px;
+}
+
+.modal__textarea {
+  width: 350px;
+  height: 130px;
+  margin-bottom: 40px;
+  resize: none;
+  -webkit-appearance: none;
+}
+
+.form__submit-button {
+  width: 160px;
+  height: 40px;
+  padding: 10px;
+  background-color: red;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  text-transform: uppercase;
+}
+
+
+@media (max-width: $l-width) {
+  .modal {
+    width: 320px;
+    height: 500px;
+    align-content: flex-start;
+
+  }
+
+  .modal__title {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .cross {
+    position: absolute;
+    top: 20px;
+    left: 90%;
+  }
+
+  .modal__form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .modal__input {
+    width: 100%;
+  }
+
+  .modal__textarea {
+    height: 80px;
+    margin-bottom: 20px;
+  }
+
+  .form__submit-button {
+    margin: 0 auto;
+  }
+
+
+
+
+}

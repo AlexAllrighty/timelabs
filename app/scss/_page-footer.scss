@@ -1,0 +1,13 @@
+.page-footer {
+  @include section-padding;
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.page-footer__item {
+  font-size: 14px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <title>Title</title>
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="wrapper">
+                <nav class="main-nav">
+                    <ul class="main-nav__list">
+                        <li class="list__item" >
+                            <a class="list-item__link" href="#product">О продукте</a>
+                        </li>
+                        <li class="list__item" >
+                            <a class="list-item__link"  href="#manufacture">Производство</a>
+                        </li>
+                        <li class="list__item" >
+                            <a class="list-item__link"  href="#features">О нас</a>
+                        </li>
+                        <li class="list__item" >
+                            <a class="list-item__link"  href="#contacts">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="product" id="product">
+                <div class="wrapper">
+                    <div class="product__slider">
+                        <img class="slider__item slider__item--hidden" src="img/img-1.jpg">
+                        <img class="slider__item slider__item--hidden" src="img/img-2.jpg">
+                        <img class="slider__item slider__item--hidden" src="img/img-3.jpg">
+                        <img class="slider__item slider__item--hidden" src="img/img-4.jpg">
+                        <img class="slider__item" src="img/img-5.jpg">
+                        <button class="slider__button slider__button--previous"></button>
+                        <button class="slider__button slider__button--next"></button>
+                        <div class="slider__radio-block">
+                            <input class="slider__radio" type="radio" id="slide-1" value="1" name="gallery-button" checked>
+                            <label for="slide-1"></label>
+                            <input class="slider__radio" type="radio" id="slide-2" value="2" name="gallery-button">
+                            <label for="slide-2"></label>
+                            <input class="slider__radio" type="radio" id="slide-3" value="3" name="gallery-button">
+                            <label for="slide-3"></label>
+                            <input class="slider__radio" type="radio" id="slide-4" value="4" name="gallery-button">
+                            <label for="slide-4"></label>
+                            <input class="slider__radio" type="radio" id="slide-5" value="5" name="gallery-button">
+                            <label for="slide-5"></label>
+                        </div>
+                    </div>
+
+                    <div class="product__description">
+                        <h1 class="description__title">Радиополгощающие материалы от производителя</h1>
+                        <p class="description__text">
+                           У нас вы найдёте только сертифицированные РПМ из высокопроизводительного феррита с высококачественным пирамидальным радиопоглощающим материалом. Сочетание ферритовых пластин и коротких пирамид с согласованным импедансом позволяет получить высокопроизводительный широкополосный радиопоглощающий материал в диапазоне частот от 30 МГц до 40 ГГц.
+                        </p>
+                    </div>
+                    <div class="order__wrapper">
+                        <button class="button product__button">Заказать</button>
+                    </div>
+                </div>
+            </section>
+            <section class="manufacture"id="manufacture">
+                <div class="wrapper">
+                    <h2 class="manufacture__title">Производство</h2>
+                    <div class="manufacture__video">
+                        <iframe src="https://www.youtube.com/embed/6ggSVqMUHB0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <div class="manufacture__description">
+                        <h3 class="description__title">Технические характеристики</h3>
+                        <div class="information">
+                            <ul class="information__row">
+                                <li>Состав:</li>
+                                <li>пенополиуретан, углеродный наполнитель, антипирены.</li>
+                            </ul>
+                            <ul class="information__row">
+                                <li>Предельно допустимая мощность:</li>
+                                <li>0.25 Вт/см²</li>
+                            </ul>
+                            <ul class="information__row">
+                                <li>Стандартные размеры:</li>
+                                <li>SA-30,50,100,150,200,300,400,500,700,800,1000</li>
+                            </ul>
+                            <ul class="information__row">
+                                <li>Размер основания:</li>
+                                <li>500x500mm (может быть изменён по просьбе заказчика)</li>
+                            </ul>
+                            <ul class="information__row">
+                                <li>Цвет:</li>
+                                <li>Голубой (может быть изменён по просьбе заказчика)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="features" id="features">
+                <div class="wrapper">
+                    <h1 class="features__title">Почему нужно заказывать у нас?</h1>
+                    <ul class="features-list">
+                        <li class="features-list__item features-list__item--1">Cтрана производства: Россия</li>
+                        <li class="features-list__item features-list__item--2">Использование в "чистых помещениях"</li>
+                        <li class="features-list__item features-list__item--3">Разработка по индивидуальным чертежам</li>
+                        <li class="features-list__item features-list__item--4">Срок изготовления от 7 дней</li>
+                        <li class="features-list__item features-list__item--5">Доставка</li>
+                        <li class="features-list__item features-list__item--6">Шеф монтаж</li>
+                    </ul>
+                    <button class="button features__button">Заказать</button>
+                </div>
+            </section>
+            <div class="modal hidden">
+                <h2 class="modal__title">Напишите нам, и мы с Вами свяжемся</h2>
+                <a class="cross"></a>
+                <form class="modal__form" method="post">
+                    <div class="modal__inner-wrapper">
+                        <input class="modal__input" name="name" type="text" placeholder="Имя" required>
+                        <input class="modal__input" name="email" type="text" placeholder="E-mail" required>
+                        <input class="modal__input" name="з" type="text" placeholder="Телефон" required>
+                    </div>
+                    <div class="modal__textarea-wrapper">
+                        <textarea name="text" class="modal__input modal__textarea" placeholder="Пишите, всё что захотите" required></textarea>
+                        <button class="form__submit-button" type="submit">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer class="page-footer" id="contacts">
+            <div class="wrapper">
+                <span class="page-footer__item page-footer__item--phone">+7999999999</span>
+                <span class="page-footer__item page-footer__item--email">mail@mail.com</span>
+                <span class="page-footer__item page-footer__item--address">221b Baker St, Marylebone, London</span>
+            </div>
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>

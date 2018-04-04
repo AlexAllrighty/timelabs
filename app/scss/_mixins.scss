@@ -1,0 +1,27 @@
+@mixin container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media (max-width: $xl-width) {
+    width: 98%;
+    padding: 0 10px;
+  }
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin link-reset {
+  color: black;
+  text-decoration: none;
+}
+
+@mixin section-padding {
+  padding: 30px 0px;
+  @media (max-width: $l-width) {
+    padding: 20px 0px;
+  }
+}
